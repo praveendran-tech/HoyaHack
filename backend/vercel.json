@@ -13,7 +13,7 @@
       {
         "source": "/api/(.*)",
         "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "https://hoya-hack.vercel.app" },
+          { "key": "Access-Control-Allow-Origin", "value": "http://hoya-hack.vercel.app" },
           { "key": "Access-Control-Allow-Methods", "value": "GET,POST,PUT,DELETE,OPTIONS" },
           { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
         ]
