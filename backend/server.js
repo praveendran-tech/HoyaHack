@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://hoya-hack.vercel.app/"], // Replace with your actual frontend URL
+    origin: ["https://hoya-hack.vercel.app/"], // Replace with your actual frontend URL
     methods: ["GET", "POST", "PUT", "DELETE","OPTIONS"], // Specify allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Specify allowed headers
     credentials: true, // If you need to allow cookies
@@ -19,7 +19,7 @@ app.use(
 );
 
 // Define allowed origins
-const allowedOrigins = ["http://hoya-hack.vercel.app/"]
+const allowedOrigins = ["https://hoya-hack.vercel.app/"]
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
