@@ -21,21 +21,13 @@ app.use(
 // Define allowed origins
 const allowedOrigins = ["https://hoya-hack.vercel.app/"]
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  },
+  origin: "https://hoya-hack.vercel.app/",
   methods: ["GET", "POST", "PUT", "DELETE","OPTIONS"],
   credentials: true,
 };
 
 // Middleware
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Serve static files
 
